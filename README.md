@@ -6,7 +6,7 @@ To install, you will need Docker:
 `sudo apt-get update && sudo apt-get install docker'
 
 Don't forget to move the terminal entry point to the bot folder:
-cd /home/[user dir]/Rainbow-filly-bot/
+cd /home/[user dir]/Rainbow-filly/
 
 To install the bot easily, use the command:
 `~bash ./sh/auto-build'
