@@ -15,12 +15,12 @@ cd Rainbow-filly
 
 ##### To install the bot easily, use the command:
 ```text
-~bash ./sh/auto-build
+bash ./sh/auto-build
 ```
 
 ##### In the future, to launch the bot, use the command:
 ```text
-~bash ./sh/start
+bash ./sh/start
 ```
 
 If you want the bot to track updates of artists you like, add the artist tag to the file `./data/artist/list.json`
