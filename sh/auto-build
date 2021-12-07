@@ -1,0 +1,4 @@
+#!/bin/bash
+bash ./sh/build
+bash ./sh/run
+bash ./sh/unstoppable

@@ -1,0 +1,15 @@
+aiohttp
+aiosignal
+async-timeout
+asyncio
+attrs
+chardet
+charset-normalizer
+discord
+discord.py
+frozenlist
+idna
+multidict
+simplejson
+typing-extensions
+yarl

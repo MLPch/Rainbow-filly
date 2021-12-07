@@ -1,0 +1,3 @@
+#!/bin/bash
+source ./sh/_NAME
+docker run -d --name $NAMECONT -e TZ=Europe/Moscow -v $('pwd')/data/:/data/ $NAMEDOCK /bin/bash -c "python3 bot.py"

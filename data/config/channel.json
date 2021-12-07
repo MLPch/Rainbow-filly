@@ -1,0 +1,8 @@
+{
+	"PICS": ~The channel for the pic's autopost(int),
+	"LOGS": ~Channel for logging(int),
+	"TEST": ~Channel for tests(int),
+	"CLOP": ~Adult Channel(int),
+	"DARK": ~Channel for dark content(int),
+	"PAINT": ~A channel for tracking artists on DB(int)
+}
