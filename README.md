@@ -11,7 +11,7 @@ git clone https://github.com/MLPch/Rainbow-filly.git
 cd Rainbow-filly
 ```
 
-##### Before install the bot, configure the config file in `./data/config/`
+#### Before install the bot, configure the config file in `./data/config/`
 
 If you want the bot to track updates of artists you like, add the artist tag to the file `./data/artist/list.json`
 The file must have the correct json format.
