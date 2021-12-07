@@ -1,0 +1,6 @@
+#!/bin/bash
+bash ./sh/stop
+sleep 1
+bash ./sh/del
+sleep 1
+bash ./sh/del-all-images

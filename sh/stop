@@ -1,0 +1,3 @@
+#!/bin/bash
+source ./sh/_NAME
+docker stop $NAMECONT
