@@ -1,7 +1,5 @@
 # Rainbow-filly-bot
 
-Before launching the bot, configure the config file in `./data/config/`
-
 To install, you will need Docker and git:
 ```text
 sudo apt-get update && sudo apt-get install docker git
@@ -12,6 +10,8 @@ Don't forget to move the terminal entry point to the bot folder:
 ```text
 cd Rainbow-filly
 ```
+
+Before install the bot, configure the config file in `./data/config/`
 
 To install the bot easily, use the command:
 ```text
