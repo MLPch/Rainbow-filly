@@ -1,24 +1,24 @@
-# Rainbow-filly-bot
+## Rainbow-filly-bot
 
-To install, you will need Docker and git:
+##### To install, you will need Docker and git:
 ```text
 sudo apt-get update && sudo apt-get install docker git
 git clone https://github.com/MLPch/Rainbow-filly.git
 ```
 
-Don't forget to move the terminal entry point to the bot folder:
+##### Don't forget to move the terminal entry point to the bot folder:
 ```text
 cd Rainbow-filly
 ```
 
-Before install the bot, configure the config file in `./data/config/`
+##### Before install the bot, configure the config file in `./data/config/`
 
-To install the bot easily, use the command:
+##### To install the bot easily, use the command:
 ```text
 ~bash ./sh/auto-build
 ```
 
-In the future, to launch the bot, use the command:
+##### In the future, to launch the bot, use the command:
 ```text
 ~bash ./sh/start
 ```
@@ -27,7 +27,7 @@ If you want the bot to track updates of artists you like, add the artist tag to 
 The file must have the correct json format.
 The tag must correspond to how the tag is specified in the browser address bar when searching on DB without the prefix 'artist:'.
 
-Example:
+##### Example:
 ```json
 [
 	"psfmer",
