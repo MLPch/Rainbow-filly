@@ -1,0 +1,19 @@
+[Unit]
+Description=Rainbow Filly
+After=network.target
+
+[Service]
+User=<user>
+Group=<group>
+
+OOMScoreAdjust=-100
+
+Type=simple
+
+WorkingDirectory=<path-to-rainbowfilly-dir>
+ExecStart=<path-to-rainbowfilly-venv-bin-python3> bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

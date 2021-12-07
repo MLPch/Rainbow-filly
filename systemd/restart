@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sudo systemctl daemon-reload
+sudo systemctl restart rainbowfilly
+sudo "/home/dacaoo/python/rainbowfilly/sh-cron-logs"
+sleep 2
+sudo systemctl status rainbowfilly

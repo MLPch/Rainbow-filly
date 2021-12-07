@@ -1,0 +1,11 @@
+#!/bin/bash
+#Предварительно проверить правильность путей в файле rainbowfilly.service
+
+sudo cp rainbowfilly.service /etc/systemd/system/rainbowfilly.service
+sudo systemctl enable rainbowfilly
+sudo systemctl -l status rainbowfilly
+
+# sudo systemctl start rainbowfilly
+#? sudo systemctl reload rainbowfilly
+# sudo systemctl -l status rainbowfilly
+# sudo systemctl daemon-reload

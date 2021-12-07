@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "rainbow-filly"
+version = "0.1.0"
+description = ""
+authors = ["Jawerka <eqwdsasd@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = "^3.8.5"
+aiosignal = "^1.3.1"
+async-timeout = "^4.0.3"
+asyncio = "^3.4.3"
+attrs = "^23.1.0"
+certifi = "^2023.7.22"
+chardet = "^5.2.0"
+charset-normalizer = "^3.2.0"
+disnake = "^2.9.0"
+frozenlist = "^1.4.0"
+fuzzywuzzy = "^0.18.0"
+idna = "^3.4"
+levenshtein = "^0.21.1"
+multidict = "^6.0.4"
+python-levenshtein = "^0.21.1"
+rapidfuzz = "^3.3.0"
+requests = "^2.31.0"
+simplejson = "^3.19.1"
+typing-extensions = "^4.7.1"
+urllib3 = "^2.0.4"
+yarl = "^1.9.2"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

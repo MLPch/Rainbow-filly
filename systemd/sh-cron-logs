@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo journalctl --no-hostname -eu rainbowfilly | tail -n 15 | cut -f 2,3,5- -d ' ' > /home/dacaoo/python/rainbowfilly/journalctl.log

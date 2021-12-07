@@ -1,0 +1,54 @@
+sudo apt install -y python3-venv 
+
+sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+
+mkdir rainbowfilly && cd rainbowfilly
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+cat requirements.txt | sed -e '/^\s*#.*$/d' -e '/^\s*$/d' | xargs -n 1 python3 -m pip install --no-cache-dir
+
+Для удаления всех пакетов
+pip freeze | xargs pip uninstall -y
+
+Для удаления одного пакета
+pip uninstall <имя пакета> -y
+
+
+########
+pip freeze >> requirements.txt
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+python3 -m pip install -r requirements.txt --no-cache-dir
+
+/home/dacaoo/python/RelatedDBpics/venv/bin/python /home/dacaoo/python/RelatedDBpics/main.py
+########
+
+
+
+
+###
+Добавить русскую локализацию
+sudo apt install locales
+
+sudo dpkg-reconfigure locales
+Найти в списке все ru_RU-UTF-8
+
+sudo systemctl show-environment |grep LANG
+Если стоит кодировка не UTF-8
+
+sudo localectl set-locale LANG=en_US.utf8
+sudo reboot
+Проверить кодировку
+
+###
+Для быстрой активации
+cd ~/python/rainbowfilly/ && source venv/bin/activate
+
+###
+Для выхода из venv ввести deactivate
