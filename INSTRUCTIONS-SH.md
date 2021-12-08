@@ -4,7 +4,7 @@
 All quick commands are bash scripts, in which the commands are simplified for convenience and ease of managing the docker and the container with the bot.
 You can work with docker directly if it is convenient for you.
 The terminal entry point should be located in the root folder of the bot.
-The `_NAME` file specifies the name for the image and container being created. Change them if required.
+The `./sh/_NAME` file specifies the name for the image and container being created. Change them if required.
 #### Common view of the command:
 ```bash
 bash ./sh/[command]
