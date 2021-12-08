@@ -1,10 +1,6 @@
 ## Rainbow-filly-bot
 
-#### To install, you will need Docker and git:
-```text
-sudo apt-get update && sudo apt-get install docker git
-git clone https://github.com/MLPch/Rainbow-filly.git
-```
+#### To install, you will need Docker and git
 
 #### Don't forget to move the terminal entry point to the bot folder:
 ```text
