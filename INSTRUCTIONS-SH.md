@@ -1,6 +1,6 @@
 ### Instructions for quick commands
 
-#### Concept
+### Concept
 All quick commands are bash scripts, in which the commands are simplified for convenience and ease of managing the docker and the container with the bot.
 You can work with docker directly if it is convenient for you.
 The terminal entry point should be located in the root folder of the bot.
