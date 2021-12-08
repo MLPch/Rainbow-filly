@@ -38,6 +38,7 @@ bash ./sh/auto-build
 bash ./sh/start
 ```
 ###
+#### You can read more about the commands here: [INSTRUCTIONS-SH.md](https://github.com/MLPch/Rainbow-filly/blob/main/INSTRUCTIONS-SH.md)
 #
 <p align="left">
     <a href="https://discord.gg/wGPRmEcQ6s">
