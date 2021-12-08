@@ -1,4 +1,4 @@
 #!/bin/bash
 source ./sh/_NAME
 docker start $NAMECONT
-docker logs -f --details $NAMECONT
+docker logs -f --tail 10 $NAMECONT

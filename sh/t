@@ -1,3 +1,4 @@
 #!/bin/bash
 source ./sh/_NAME
-docker logs -f --details $NAMECONT
+docker logs --tail 10 $NAMECONT
+docker exec -it $NAMECONT bash

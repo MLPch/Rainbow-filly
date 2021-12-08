@@ -399,9 +399,19 @@ async def bg_task_follow():
             try:
                 with open('./artist/list.json', 'r') as f:
                     artist_list = json.load(f)
+                    
             except:
                 await bot.get_channel(ID['LOGS']).send('Ошибка открытия списка художников')
+                print('Ошибка открытия списка художников')
                 await asyncio.sleep(120)
+                
+            else:
+                if not artist_list:
+                    print('Список художников пуст')
+                    
+                    # Завершаем функцию если список художников пуст (!!!)
+                    return
+            
             
         await asyncio.sleep(1)
 
