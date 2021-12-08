@@ -400,16 +400,20 @@ async def bg_task_follow():
                 with open('./artist/list.json', 'r') as f:
                     artist_list = json.load(f)
                     
-            except:
-                await bot.get_channel(ID['LOGS']).send('Ошибка открытия списка художников')
-                print('Ошибка открытия списка художников')
-                await asyncio.sleep(120)
+            except FileNotFoundError:
+                print('Отсутствует файл ./data/artist/list.json')
+                await bot.get_channel(ID['LOGS']).send('Отсутствует файл ./data/artist/list.json')
+                return
+                
+            except Exception as e:
+                print('Неверный формат файла ./data/artist/list.json\n' + str(e))
+                await bot.get_channel(ID['LOGS']).send('Неверный формат файла ./data/artist/list.json\n' + str(e))
+                return
                 
             else:
                 if not artist_list:
                     print('Список художников пуст')
-                    
-                    # Завершаем функцию если список художников пуст (!!!)
+                    await bot.get_channel(ID['LOGS']).send('Список художников пуст')
                     return
             
             
