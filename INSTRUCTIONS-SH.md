@@ -14,12 +14,11 @@ bash ./sh/[command]
 bash ./sh/build
 ```
 For further work of the bot, you need to register the mounting points, as well as create and demonize its container. 
-#### To do this, use the command:
+#### For a quick start, use the command:
 ```bash
 bash ./sh/run
 ```
 The bot will be ready and running now.
-#### 
 #### In order to stop the container from working with the bot, use the command:
 ```bash
 bash ./sh/stop
