@@ -14,7 +14,7 @@ bash ./sh/[command]
 bash ./sh/build
 ```
 For further work of the bot, you need to register the mounting points, as well as create and demonize its container. 
-#### For a quick start, use the command:
+#### For the first run, use the command:
 ```bash
 bash ./sh/run
 ```
