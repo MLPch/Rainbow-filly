@@ -538,15 +538,14 @@ async def bg_task_post():                                             # фоно
         await asyncio.sleep(rnd.time(6000))
 
         hour = time.localtime(time.time()).tm_hour
-            
-        # Сделана поправка на +0 часовой пояс (-3 от Москвы)
-        if hour >= 3 and hour < 6:
+        
+        if hour >= 6 and hour < 9:
             string = 'page=1&sf=random%3A' + rnd.key() + '&per_page=50&sd=desc&filter_id=191485&q=-oc%2C+solo%2C+rd%2C+pony%2C+morning+ponies%2C+score.gte%3A50'
                     
-        elif hour > 19 or hour < 1:
+        elif hour > 22 or hour < 4:
             string = 'page=1&sf=random%3A' + rnd.key() + '&per_page=50&sd=desc&filter_id=191485&q=-oc%2C+solo%2C+rd%2C+pony%2C+sleep%2C+score.gte%3A50'
                 
-        elif hour >= 1 and hour < 3:
+        elif hour >= 4 and hour < 6:
             string = 'page=1&sf=random%3A' + rnd.key() + '&per_page=50&sd=desc&filter_id=191485&q=-oc%2C+solo%2C+rainbowbat%2C+score.gte%3A50'
                 
         else:
