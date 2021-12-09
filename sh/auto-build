@@ -1,6 +1,4 @@
 #!/bin/bash
 bash ./sh/build
 bash ./sh/run
-bash ./sh/stop
 bash ./sh/unstoppable
-bash ./sh/start
