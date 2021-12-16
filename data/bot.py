@@ -259,7 +259,7 @@ async def manage_followers(artist_path):
                 plus = []
 
 
-            # Сначала собираем все плюсы
+            # Сначала собираем все зеленые
             for reaction in message.reactions:
                 if '\U0001F7E2' in reaction.emoji:
                     users = await reaction.users().flatten()
@@ -271,7 +271,7 @@ async def manage_followers(artist_path):
 
             plus = list(set(plus))
             
-            # Удаляем из плюсов минусы
+            # Удаляем из списка зеленых красные
             for reaction in message.reactions:
                 if '\U0001F534' in reaction.emoji:
                     users = await reaction.users().flatten()
@@ -280,7 +280,38 @@ async def manage_followers(artist_path):
                             continue
                             
                         plus.remove(user.id)
+                        
+                        text = 'Привет! Ты отписан от обновлений артиста ' + artist
+                        try:
+                            user = await bot.fetch_user(user.id)
+                            await user.send(text)
+                        except:
+                            pass
             
+            
+            old = followers.get(artist)
+            
+            if old:
+                for user_id in plus:
+                    if not user_id in old:
+                        
+                        text = 'Привет! Ты подписан на обновления артиста ' + artist
+                        try:
+                            user = await bot.fetch_user(user_id)
+                            await user.send(text)
+                        except:
+                            pass
+            
+            else:
+                if plus:
+                    for user_id in plus:
+                        text = 'Привет! Ты подписан на обновления артиста ' + artist
+                        try:
+                            user = await bot.fetch_user(user_id)
+                            await user.send(text)
+                        except:
+                            pass
+
             followers[artist] = plus
     
     # Записываем фолловеров
@@ -291,7 +322,6 @@ async def manage_followers(artist_path):
             break
         except:
             await asyncio.sleep(rnd.time(5))
-
 
 # Функция повтора
 async def repeat(message, string):
