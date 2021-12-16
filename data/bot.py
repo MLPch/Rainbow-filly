@@ -496,15 +496,19 @@ async def bg_task_post():
 
         hour = time.localtime(time.time()).tm_hour
         
+        # утро
         if hour >= 6 and hour < 9:
             string = 'page=1&sf=random%3A' + rnd.key() + '&per_page=50&sd=desc&filter_id=191485&q=-oc%2C+solo%2C+rd%2C+pony%2C+morning+ponies%2C+score.gte%3A50'
-                    
+        
+        # ночь
         elif hour > 22 or hour < 4:
             string = 'page=1&sf=random%3A' + rnd.key() + '&per_page=50&sd=desc&filter_id=191485&q=-oc%2C+solo%2C+rd%2C+pony%2C+sleep%2C+score.gte%3A50'
-                
+        
+        # зубки
         elif hour >= 4 and hour < 6:
             string = 'page=1&sf=random%3A' + rnd.key() + '&per_page=50&sd=desc&filter_id=191485&q=-oc%2C+solo%2C+rainbowbat%2C+score.gte%3A50'
-                
+        
+        # день
         else:
             string = 'page=1&sf=random%3A' + rnd.key() + '&per_page=50&sd=desc&filter_id=191485&q=-oc%2C+solo%2C+rd%2C+pony%2C+score.gte%3A120'
         
@@ -593,7 +597,7 @@ async def on_message(message):
         check_find = ['найди', 'поищи', 'find']
         check_find_true = any(check_find in message.content.lower() for check_find in check_find)
         
-        if check_find_true:
+        if check_find_true and not message.channel.id == ID['PAINT']:
                     
             if not reply_attach_url and not message_attach_url:
                 task = asyncio.create_task(post_pic(message))
@@ -617,7 +621,7 @@ async def on_message(message):
         # Заходим только если было прямое упоминание, без упоминания бота в ответе
         # Сделано для исключения реакции на ответ с текстом на ответ бота (комментарий на пост от юзера)
         # Т.к. словарь содержит очень много ключей, которые могут вызывать ложные срабатывания и вобще
-        if check_post_true and not bot.user == reply_author:
+        if check_post_true and not bot.user == reply_author and not message.channel.id == ID['PAINT']:
             
             task = asyncio.create_task(post_pic(message))
             return 
@@ -636,7 +640,7 @@ async def on_message(message):
     
     # Постит пикчи с Дэш при упоминании
     # В сейф-каналах
-    if lassitude < 6 and bot.user in message.mentions and not bot.user == reply_author and not message.channel.id == ID['CLOP'] and not message.channel.id == ID['DARK']:
+    if lassitude < 6 and bot.user in message.mentions and not bot.user == reply_author and not message.channel.id == ID['CLOP'] and not message.channel.id == ID['DARK'] and not message.channel.id == ID['PAINT']:
             
         lassitude += 1
         
