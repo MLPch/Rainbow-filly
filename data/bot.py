@@ -531,11 +531,11 @@ async def bg_task_post():
             string = 'page=1&sf=random%3A' + rnd.key() + '&per_page=50&sd=desc&filter_id=191485&q=-oc%2C+solo%2C+rd%2C+pony%2C+morning+ponies%2C+score.gte%3A50'
         
         # ночь
-        elif hour > 22 or hour < 4:
+        elif hour > 22 or hour < 5:
             string = 'page=1&sf=random%3A' + rnd.key() + '&per_page=50&sd=desc&filter_id=191485&q=-oc%2C+solo%2C+rd%2C+pony%2C+sleep%2C+score.gte%3A50'
         
         # зубки
-        elif hour >= 4 and hour < 6:
+        elif hour >= 5 and hour < 6:
             string = 'page=1&sf=random%3A' + rnd.key() + '&per_page=50&sd=desc&filter_id=191485&q=-oc%2C+solo%2C+rainbowbat%2C+score.gte%3A50'
         
         # день

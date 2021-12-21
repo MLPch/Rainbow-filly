@@ -38,6 +38,9 @@ async def first(l_artist, q):
         
         future[artist] = l
         
+        # Задержка между запросами чтобы не нашлепали по ручкам
+        await asyncio.sleep(21)
+        
     return future
 
 
