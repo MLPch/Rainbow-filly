@@ -9,12 +9,11 @@ cd Rainbow-filly
 
 If you want the bot to track updates of artists you like, add the artist tag to the file `./data/artist/list.json`
 The file must have the correct json format.
-The tag must correspond to how the tag is specified in the browser address bar when searching on DB without the prefix 'artist:'.
 
 Example:
 ```json
 [
-	"psfmer",
+	"artist:psfmer",
 	"nendo",
 	"scarlett-spectrum",
 	"devil sugar"
