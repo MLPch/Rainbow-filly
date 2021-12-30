@@ -17,7 +17,7 @@ Example:
 	"psfmer",
 	"nendo",
 	"scarlett-spectrum",
-	"devil+sugar"
+	"devil sugar"
 ]
 ```
 
